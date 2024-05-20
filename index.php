@@ -11,7 +11,9 @@
 <div class="NavBar">
 <div class="one"> <h2>Meri Academy</h2></div>
 <div class="two"> <a href="index.php">Add Student</a>
-    <a href="DisplayData.php">View Student Details</a></div>
+    <a href="DisplayData.php">View Student Details</a>
+ <a href="teacherPage.php">Add Teacher</a>
+    <a href="DisplayTeacherDetails.php">View Teacher Details</a></div>
 </div>
     <div class="container">
         <h1>School Management System</h1>

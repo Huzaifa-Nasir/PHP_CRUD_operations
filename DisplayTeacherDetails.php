@@ -17,14 +17,14 @@
     <a href="DisplayTeacherDetails.php">View Teacher Details</a></div>
 </div>
     <div class="container">
-    <h2>Student List</h2>
+    <h2>Teacher List</h2>
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Class</th>
+                    <th>Teacher ID</th>
+                    <th>Teaacher Name</th>
+                    <th>Teacher Age</th>
+                    <th>Course</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -32,30 +32,30 @@
                 <?php
                 include 'db_connect.php';
 
-                $sql = "SELECT * FROM students";
+                $sql = "SELECT * FROM teachers";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo "<tr>";
-                        echo "<td>" . $row["id"] . "</td>";
-                        echo "<td>" . $row["name"] . "</td>";
-                        echo "<td>" . $row["age"] . "</td>";
-                        echo "<td>" . $row["class"] . "</td>";
+                        echo "<td>" . $row["tid"] . "</td>";
+                        echo "<td>" . $row["tname"] . "</td>";
+                        echo "<td>" . $row["tage"] . "</td>";
+                        echo "<td>" . $row["course"] . "</td>";
                         echo "<td>
-                            <form action='update_student.php' method='post' class='inline-form'>
-                                <input type='hidden' name='studentId' value='" . $row["id"] . "'>
+                            <form action='update_teacher.php' method='post' class='inline-form'>
+                                <input type='hidden' name='teacherId' value='" . $row["tid"] . "'>
                                 <button type='submit'>Update</button>
                             </form>
-                            <form action='delete_student.php' method='post' class='inline-form'>
-                                <input type='hidden' name='studentId' value='" . $row["id"] . "'>
+                            <form action='delete_teacher.php' method='post' class='inline-form'>
+                                <input type='hidden' name='teacherId' value='" . $row["tid"] . "'>
                                 <button type='submit'>Delete</button>
                             </form>
                         </td>";
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='5'>No students found</td></tr>";
+                    echo "<tr><td colspan='5'>No Teachers found</td></tr>";
                 }
 
                 $conn->close();

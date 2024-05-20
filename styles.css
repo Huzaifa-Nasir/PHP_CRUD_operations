@@ -44,7 +44,7 @@ body {
 .two{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
 }
 .one h2{
     color: black;
