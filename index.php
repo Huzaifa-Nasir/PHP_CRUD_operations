@@ -13,7 +13,11 @@
 <div class="two"> <a href="index.php">Add Student</a>
     <a href="DisplayData.php">View Student Details</a>
  <a href="teacherPage.php">Add Teacher</a>
-    <a href="DisplayTeacherDetails.php">View Teacher Details</a></div>
+    <a href="DisplayTeacherDetails.php">View Teacher Details</a>
+    <a href="add_fee.php">Add Fee</a>
+    <a href="record_payment.php">Record Payment</a>
+    <a href="view_reports.php">View Reports</a>
+</div>
 </div>
     <div class="container">
         <h1>School Management System</h1>
